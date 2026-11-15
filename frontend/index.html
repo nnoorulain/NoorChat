@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NoorChat · NLP Lab</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/chat.js" defer></script>
+</head>
+<body>
+  <main class="workspace">
+    <aside class="intro" aria-label="About NoorChat">
+      <div class="brand"><span class="brand-icon" aria-hidden="true">✦</span> NoorChat</div>
+      <div class="intro-copy">
+        <p class="eyebrow">THE NLP LAB</p>
+        <h1>A little chat.<br><em>A lot to learn.</em></h1>
+        <p>Meet our Python chatbot. Ask a question and see which text-matching rule finds your reply.</p>
+      </div>
+      <section class="companion" aria-label="NoorChat companion">
+        <label class="companion-control">
+          <span>Companion</span>
+          <input id="companion-toggle" class="sr-only" type="checkbox" role="switch"
+                 aria-controls="companion-stage" checked>
+          <span class="switch-track" aria-hidden="true"></span>
+        </label>
+        <div id="companion-stage" class="companion-stage">
+          <button id="companion-next" class="companion-portrait" type="button"
+                  aria-label="Change companion pose" aria-describedby="companion-frame-label">
+            <img id="companion-image" src="/companion.webp" width="160" height="160"
+                 alt="Illustrated NoorChat companion with dark hair, black glasses, and a black shirt">
+            <span class="companion-cycle-icon" aria-hidden="true">↻</span>
+          </button>
+          <div class="companion-greeting">
+            <strong>Hi, I’m Noor!</strong>
+            <span class="companion-hover-tip">Hover over my picture to change my pose.</span>
+            <span class="companion-tap-tip">Tap my picture to change my pose.</span>
+            <span id="companion-frame-label" class="companion-frame-label" aria-live="polite">Portrait · 1 of 3</span>
+          </div>
+        </div>
+      </section>
+      <section class="history" aria-labelledby="history-title">
+        <h2 id="history-title" class="eyebrow">RECENT CHATS</h2>
+        <p class="history-note">Up to 2 chats saved for 24 hours.</p>
+        <div id="chat-history" class="history-list">
+          <p class="history-note">Loading saved chats…</p>
+        </div>
+      </section>
+      <p class="credits">Built by Noorulain</p>
+    </aside>
+    <section class="chat" aria-label="Chat with NoorChat">
+      <header class="chat-header">
+        <span class="avatar" aria-hidden="true">✦</span>
+        <div>
+          <h2>NoorChat</h2>
+          <p><span class="status-dot" aria-hidden="true"></span> Local Python chatbot</p>
+        </div>
+        <button id="reset" class="reset" type="button">New chat</button>
+      </header>
+      <div id="messages" class="messages" role="log" aria-label="Chat messages"></div>
+      <div class="chat-footer">
+        <p class="eyebrow">TRY ASKING</p>
+        <div class="suggestions">
+          <button type="button" data-message="What is NLP?">What is NLP?</button>
+          <button type="button" data-message="How do you work?">How do you work?</button>
+          <button type="button" data-message="What's your name?">What's your name?</button>
+        </div>
+        <form id="chat-form">
+          <label class="sr-only" for="message">Your message</label>
+          <input id="message" placeholder="Type a message…" maxlength="300" autocomplete="off" required>
+          <button id="send" type="submit">Send <span aria-hidden="true">↑</span></button>
+        </form>
+        <p class="chat-note">Offline demo <span aria-hidden="true">·</span> Replies come from a Python dictionary.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
