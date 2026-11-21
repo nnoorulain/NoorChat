@@ -40,3 +40,5 @@ Explain that the class terminal loop read messages with `input()` and showed rep
 To add a new answer, add one lowercase key and its reply to `RESPONSES` in `chatbot.py`. Restart `app.py` to see the change.
 
 To explain the companion, show how `updateCompanion()` sets the panel's `hidden` property. Then show how `nextCompanionFrame()` advances through the image array when the mouse enters the picture. The remainder operator `%` takes the index back to zero after the last pose.
+
+This project uses Jenkins for continuous integration.
