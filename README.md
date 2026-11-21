@@ -42,3 +42,4 @@ To add a new answer, add one lowercase key and its reply to `RESPONSES` in `chat
 To explain the companion, show how `updateCompanion()` sets the panel's `hidden` property. Then show how `nextCompanionFrame()` advances through the image array when the mouse enters the picture. The remainder operator `%` takes the index back to zero after the last pose.
 
 This project uses Jenkins for continuous integration.
+Jenkins runs three chatbot reply tests.
